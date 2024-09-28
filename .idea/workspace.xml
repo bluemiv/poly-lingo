@@ -5,26 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed7be053-026d-4815-b9bc-2f7051159145" name="Changes" comment="feat: Turborepo로 monorepo 설정하기 #1">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/app/fonts/GeistMonoVF.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/app/fonts/GeistVF.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/app/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/app/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/app/page.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/app/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/next.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/public/file-text.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/public/globe.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/public/next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/public/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/public/window.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +30,9 @@
     &quot;accountId&quot;: &quot;72849272-92c8-4d9f-ab5c-5b158f3fb758&quot;
   }
 }</component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -55,20 +41,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/taehongkim/dev/my_service/poly-lingo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/taehongkim/dev/my_service/poly-lingo/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/taehongkim/dev/my_service/poly-lingo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/taehongkim/dev/my_service/poly-lingo/node_modules/prettier",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "/Users/taehongkim/dev/my_service/poly-lingo/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -86,6 +74,7 @@
       <updated>1727522607753</updated>
       <workItem from="1727522609461" duration="929000" />
       <workItem from="1727533573938" duration="4561000" />
+      <workItem from="1727538312509" duration="150000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Turborepo로 monorepo 설정하기 #1">
       <option name="closed" value="true" />
