@@ -2,6 +2,7 @@
   "name": "poly-lingo",
   "private": true,
   "scripts": {
+    "web": "yarn workspace web",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
