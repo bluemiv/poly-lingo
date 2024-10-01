@@ -2,6 +2,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import { DashboardOutlined, TranslationOutlined } from '@ant-design/icons';
 import { NavButton } from '@repo/ui/components';
 import { ROUTE_PATH } from '@/router';
+import dayjs from 'dayjs';
 
 export default function BaseLayout() {
   const nav = useNavigate();
@@ -31,8 +32,12 @@ export default function BaseLayout() {
           </ul>
         </nav>
       </header>
-      <Outlet />
-      <footer></footer>
+      <div className="bg-slate-50 min-h-[calc(100vh-140px)]">
+        <Outlet />
+      </div>
+      <footer className="bg-slate-50 h-[70px] text-sm flex items-center justify-center text-slate-400">
+        © bluemiv {dayjs().year()}. All Rights Reserved.
+      </footer>
     </div>
   );
 }
