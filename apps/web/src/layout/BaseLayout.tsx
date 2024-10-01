@@ -1,7 +1,7 @@
 import { Outlet, useNavigate } from 'react-router-dom';
-import { ROUTE_PATH } from '@/router';
 import { DashboardOutlined, TranslationOutlined } from '@ant-design/icons';
 import { NavButton } from '@repo/ui/components';
+import { ROUTE_PATH } from '@/router';
 
 export default function BaseLayout() {
   const nav = useNavigate();
