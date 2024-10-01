@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "web": "yarn workspace web",
+    "server": "yarn workspace server",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
