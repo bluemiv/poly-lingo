@@ -8,6 +8,11 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
+  "dependencies": {
+    "@types/lodash": "^4.17.9",
+    "dayjs": "^1.11.13",
+    "lodash": "^4.17.21"
+  },
   "devDependencies": {
     "prettier": "^3.3.3",
     "turbo": "^2.1.2",
