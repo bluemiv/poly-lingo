@@ -1,6 +1,6 @@
 import { Outlet, useNavigate } from 'react-router-dom';
 import { ROUTE_PATH } from '@/router';
-import { DashboardOutlined } from '@ant-design/icons';
+import { DashboardOutlined, TranslationOutlined } from '@ant-design/icons';
 import { NavButton } from '@repo/ui/components';
 
 export default function BaseLayout() {
@@ -13,13 +13,21 @@ export default function BaseLayout() {
           Poly Lingo
         </button>
         <nav>
-          <ul>
-            <li>
-              <NavButton className="">
-                <DashboardOutlined />
-                <span>Dashboard</span>
-              </NavButton>
-            </li>
+          <ul className="flex items-center gap-4">
+            {[
+              { icon: <DashboardOutlined />, label: 'Dashboard', link: ROUTE_PATH.ROOT },
+              {
+                icon: <TranslationOutlined />,
+                label: 'Translation',
+                link: ROUTE_PATH.TRANSLATIONS,
+              },
+            ].map(({ icon, label, link }) => (
+              <li key={label}>
+                <NavButton icon={icon} onClick={() => nav(link)}>
+                  {label}
+                </NavButton>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
