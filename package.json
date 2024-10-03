@@ -4,6 +4,8 @@
   "scripts": {
     "web": "yarn workspace web",
     "server": "yarn workspace server",
+    "db:up": "yarn db:down && docker-compose up -d",
+    "db:down": "docker-compose down",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
