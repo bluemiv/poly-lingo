@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { ServiceTranslationsModule } from './service-translations/service-translations.module';
+import { TranslationsModule } from './translations/translations.module';
 
 @Module({
   imports: [
@@ -25,7 +25,7 @@ import { ServiceTranslationsModule } from './service-translations/service-transl
         };
       },
     }),
-    ServiceTranslationsModule,
+    TranslationsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

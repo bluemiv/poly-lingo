@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { ServiceTranslationsService } from './service-translations.service';
+import { TranslationsService } from './translations.service';
 import { getModelToken } from '@nestjs/mongoose';
-import { ServiceTranslation } from './entity/service-translation.entity';
+import { Translation } from './entity/translation.entity';
 
 const mockServiceTranslation = {
   _id: '123412SD12312',
@@ -20,14 +20,14 @@ const mockServiceTranslation = {
 };
 
 describe('ServiceTranslationsService', () => {
-  let service: ServiceTranslationsService;
+  let service: TranslationsService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
-        ServiceTranslationsService,
+        TranslationsService,
         {
-          provide: getModelToken(ServiceTranslation.name),
+          provide: getModelToken(Translation.name),
           useValue: function (dto) {
             return {
               find: jest.fn().mockResolvedValue([mockServiceTranslation]),
@@ -41,7 +41,7 @@ describe('ServiceTranslationsService', () => {
       ],
     }).compile();
 
-    service = module.get<ServiceTranslationsService>(ServiceTranslationsService);
+    service = module.get<TranslationsService>(TranslationsService);
   });
 
   it('should be defined', () => {
