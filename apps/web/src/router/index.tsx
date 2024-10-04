@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
-import BaseLayout from '@/layout/BaseLayout.tsx';
-import RootPage from '@/pages/RootPage.tsx';
-import TranslationsPage from '@/pages/TranslatiojnsPage.tsx';
+import BaseLayout from '@/layout/BaseLayout';
+import RootPage from '@/pages/RootPage';
+import TranslationsPage from '@/pages/TranslationsPage';
 
 export const ROUTE_PATH = {
   ROOT: '/',

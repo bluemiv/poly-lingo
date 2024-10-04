@@ -5,6 +5,12 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  app.enableCors({
+    origin: process.env.ALLOWED_ORIGIN?.split(';') || [],
+    methods: 'GET,POST,PUT,DELETE',
+    credentials: true,
+  });
+
   const config = new DocumentBuilder()
     .setTitle('Poly Lingo')
     .setDescription('Poly Lingo API description')

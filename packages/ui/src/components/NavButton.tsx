@@ -1,5 +1,5 @@
-import { TPropsWithComponent } from '../types';
 import { ReactNode } from 'react';
+import { TPropsWithComponent } from '@repo/core/types';
 
 interface TProps {
   icon: ReactNode;

@@ -1,14 +1,17 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { StyleProvider } from '@ant-design/cssinjs';
 import './index.css';
 import { RouterProvider } from 'react-router-dom';
 import { router } from '@/router';
+import ReactQueryProvider from '@/providers/ReactQueryProvider';
+import AntdProvider from '@/providers/AntdProvider';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <StyleProvider hashPriority="high">
-      <RouterProvider router={router} />
-    </StyleProvider>
+    <ReactQueryProvider>
+      <AntdProvider>
+        <RouterProvider router={router} />
+      </AntdProvider>
+    </ReactQueryProvider>
   </StrictMode>,
 );

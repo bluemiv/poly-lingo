@@ -1,9 +1,9 @@
 {
-  "name": "@repo/ui",
+  "name": "@repo/core",
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./components": "./src/components/index.ts"
+    "./types": "./src/types/index.ts"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -12,7 +12,6 @@
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
-    "@repo/core": "*",
     "@turbo/gen": "^1.12.4",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.24",
