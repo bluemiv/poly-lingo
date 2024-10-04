@@ -1,6 +1,6 @@
 import { TQueryParams } from '@repo/core/types';
 
-const serviceTranslationApi = {
+const translationApi = {
   getServiceTranslations: (params?: TQueryParams) => ({
     url: '/service-translations/',
     params,
@@ -10,4 +10,4 @@ const serviceTranslationApi = {
   }),
 };
 
-export default serviceTranslationApi;
+export default translationApi;

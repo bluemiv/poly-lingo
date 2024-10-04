@@ -1,7 +1,7 @@
-import { useServiceTranslationsQuery } from '@/queries/serviceTranslationQuery.ts';
+import { useTranslationsQuery } from '@/queries/translationQuery';
 
 export default function TranslationsPage() {
-  const { data } = useServiceTranslationsQuery();
+  const { data } = useTranslationsQuery();
   console.log(data);
   return <main>translations</main>;
 }
