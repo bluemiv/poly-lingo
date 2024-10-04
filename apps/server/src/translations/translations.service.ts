@@ -13,7 +13,11 @@ export class TranslationsService {
   ) {}
 
   async create(createTranslationDto: CreateTranslationDto): Promise<Translation> {
-    const newTranslation = new this.translationModel(createTranslationDto);
+    const newTranslation = new this.translationModel({
+      ...createTranslationDto,
+      version: 1,
+      translations: [],
+    });
     return newTranslation.save();
   }
 
