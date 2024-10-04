@@ -1,4 +1,4 @@
 export class UpdateTranslationDto {
   readonly serviceName?: string;
-  readonly translations?: Record<string, any>[];
+  readonly data?: Record<string, any>[];
 }

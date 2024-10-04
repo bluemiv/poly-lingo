@@ -32,10 +32,10 @@ export default function BaseLayout() {
           </ul>
         </nav>
       </header>
-      <div className="bg-slate-50 min-h-[calc(100vh-140px)]">
+      <div className="min-h-[calc(100vh-140px)]">
         <Outlet />
       </div>
-      <footer className="bg-slate-50 h-[70px] text-sm flex items-center justify-center text-slate-400">
+      <footer className="h-[70px] text-sm flex items-center justify-center text-slate-400">
         © bluemiv {dayjs().year()}. All Rights Reserved.
       </footer>
     </div>

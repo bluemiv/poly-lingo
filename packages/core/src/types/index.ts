@@ -8,4 +8,6 @@ export type TPropsWithComponent<T = unknown> = T & TPropsWithClassName & TPropsW
 
 export type TObj<T = unknown> = T & { [key: string]: never };
 
-export type TQueryParams<T = unknown> = T & TObj;
+export type TApiQueryParams<T = unknown> = T & TObj;
+
+export type TApiResponse<T = unknown> = { count: number; results: T[] };

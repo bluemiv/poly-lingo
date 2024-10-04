@@ -16,13 +16,14 @@ export class TranslationsService {
     const newTranslation = new this.translationModel({
       ...createTranslationDto,
       version: 1,
-      translations: [],
+      data: [],
     });
     return newTranslation.save();
   }
 
-  async findAll(): Promise<Translation[]> {
-    return this.translationModel.find().exec();
+  async findAll(): Promise<{ count: number; results: Translation[] }> {
+    const results = await this.translationModel.find().exec();
+    return { count: results.length, results };
   }
 
   async findOne(id: string): Promise<Translation> {

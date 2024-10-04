@@ -19,7 +19,7 @@ export class Translation extends Document {
       history: [{ version: Number, ko: String, en: String, idn: String, modifiedAt: Date }],
     },
   ])
-  translations: Record<string, any>[];
+  data: Record<string, any>[];
 }
 
 export const TranslationSchema = SchemaFactory.createForClass(Translation);

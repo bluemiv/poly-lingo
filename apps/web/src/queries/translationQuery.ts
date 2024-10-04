@@ -1,19 +1,20 @@
 import { useQuery } from '@tanstack/react-query';
 import apiCaller from '@/utils/apiCaller.ts';
-import { TQueryParams } from '@repo/core/types';
+import { TApiQueryParams, TApiResponse } from '@repo/core/types';
 import translationApi from '@/api/translationApi.ts';
+import { TTranslation } from '@/features/translations/type';
 
 const PREFIX = 'TRANSLATION';
 
 export const TRANSLATIONS_QUERY_KEY = [PREFIX, 'TRANSLATIONS'];
 
-export const useTranslationsQuery = (searchParams?: TQueryParams) =>
+export const useTranslationsQuery = (searchParams?: TApiQueryParams) =>
   useQuery({
     queryKey: [...TRANSLATIONS_QUERY_KEY, searchParams],
     queryFn: async () => {
       const { url, params } = translationApi.getServiceTranslations(searchParams);
       const { data } = await apiCaller.get(url, params);
-      return data;
+      return data as TApiResponse<TTranslation>;
     },
   });
 
