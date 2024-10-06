@@ -6,6 +6,9 @@ export class Translation extends Document {
   @Prop({ required: true })
   serviceName: string;
 
+  @Prop()
+  description: string;
+
   @Prop({ default: 1 })
   version: number;
 

@@ -1,11 +1,15 @@
 import { TApiQueryParams } from '@repo/core/types';
 
 const translationApi = {
-  getServiceTranslations: (params?: TApiQueryParams) => ({
+  createTranslation: (params: { serviceName: string; description?: string }) => ({
     url: '/api/v1/translations/',
     params,
   }),
-  getServiceTranslation: (serviceTranslationId: number) => ({
+  getTranslations: (params?: TApiQueryParams) => ({
+    url: '/api/v1/translations/',
+    params,
+  }),
+  getTranslation: (serviceTranslationId: number) => ({
     url: `/api/v1/translations/${serviceTranslationId}/`,
   }),
 };
