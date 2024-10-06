@@ -6,7 +6,7 @@ export default function TranslationsPage() {
   const dataSource = data?.results?.map((v, idx) => ({ idx: idx + 1, ...v })) ?? [];
   return (
     <div className="p-6 w-full h-full">
-      <main className="rounded p-6 w-full h-full">
+      <main className="bg-white rounded-lg p-6 w-full h-full">
         <Table
           columns={[
             { title: 'idx', dataIndex: 'idx' },
