@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import apiCaller from '@/utils/apiCaller';
-import { TApiQueryParams, TApiResponse } from '@repo/core/types';
+import { TApiQueryParams, TApiResponse, TObj } from '@repo/core/types';
 import translationApi from '@/api/translationApi';
 import { TTranslation } from '@/features/translations/type';
 
@@ -20,13 +20,14 @@ export const useTranslationsQuery = (searchParams?: TApiQueryParams) =>
 
 export const TRANSLATION_QUERY_KEY = [PREFIX, 'TRANSLATION'];
 
-export const useTranslationQuery = (serviceTranslationId: number) =>
+export const useTranslationQuery = (translationId?: string, options?: TObj) =>
   useQuery({
-    queryKey: [...TRANSLATION_QUERY_KEY, serviceTranslationId],
+    queryKey: [...TRANSLATION_QUERY_KEY, translationId],
     queryFn: async () => {
-      const { url } = translationApi.getTranslation(serviceTranslationId);
+      const { url } = translationApi.getTranslation(translationId!);
       const { data } = await apiCaller.get(url);
       return data;
     },
-    enabled: !!serviceTranslationId,
+    enabled: !!translationId,
+    ...options,
   });

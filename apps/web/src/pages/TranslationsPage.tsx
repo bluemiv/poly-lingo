@@ -3,9 +3,15 @@ import { Button, Table } from 'antd';
 import { useState } from 'react';
 import CreateServiceModal from '@/features/translations/components/CreateServiceModal.tsx';
 import { PlusOutlined } from '@ant-design/icons';
+import { LinkButton } from '@repo/ui/components';
+import { useNavigate } from 'react-router-dom';
+import { ROUTE_PATH } from '@/router';
+import { replaceRoutePath } from '@repo/core/utils';
+import { TTranslation } from '@/features/translations/type';
 
 export default function TranslationsPage() {
   const [openCreateServiceModal, setOpenCreateServiceModal] = useState<boolean>(false);
+  const nav = useNavigate();
 
   const { data } = useTranslationsQuery();
   const dataSource = data?.results?.map((v, idx) => ({ idx: idx + 1, ...v })) ?? [];
@@ -26,9 +32,26 @@ export default function TranslationsPage() {
           </Button>
         </div>
         <Table
+          rowKey="_id"
           columns={[
             { title: 'idx', dataIndex: 'idx' },
-            { title: '서비스 이름', dataIndex: 'serviceName' },
+            {
+              title: '서비스 이름',
+              dataIndex: 'serviceName',
+              render: (name, record: TTranslation) => (
+                <LinkButton
+                  onClick={() =>
+                    nav(
+                      replaceRoutePath(ROUTE_PATH.TRANSLATION_DETAIL, {
+                        translationId: record._id,
+                      }),
+                    )
+                  }
+                >
+                  {name}
+                </LinkButton>
+              ),
+            },
             { title: '설명', dataIndex: 'description' },
           ]}
           dataSource={dataSource}

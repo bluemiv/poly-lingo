@@ -9,8 +9,8 @@ const translationApi = {
     url: '/api/v1/translations/',
     params,
   }),
-  getTranslation: (serviceTranslationId: number) => ({
-    url: `/api/v1/translations/${serviceTranslationId}/`,
+  getTranslation: (translationId: string) => ({
+    url: `/api/v1/translations/${translationId}/`,
   }),
 };
 

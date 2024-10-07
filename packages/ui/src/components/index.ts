@@ -1,3 +1,5 @@
 import NavButton from './NavButton';
+import NotFound from './NotFound';
+import LinkButton from './LinkButton';
 
-export { NavButton };
+export { NavButton, NotFound, LinkButton };

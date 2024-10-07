@@ -4,7 +4,8 @@
   "private": true,
   "exports": {
     "./types": "./src/types/index.ts",
-    "./constants": "./src/constants/index.ts"
+    "./constants": "./src/constants/index.ts",
+    "./utils": "./src/utils/index.ts"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
